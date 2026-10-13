@@ -1,28 +1,41 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Pro Tools Hub - Digital tools and subscription information in Pakistan.">
 <title>Pro Tools Hub | Digital Tools Store</title>
 <style>
+:root{--bg:#080f20;--card:#17243c;--accent:#38bdf8;--text:#fff;--muted:#b6c4d8}
 *{box-sizing:border-box}
-body{margin:0;background:#0f172a;color:white;font-family:Arial,sans-serif}
-header{padding:22px 15px;text-align:center;background:#111c36}
-.logo{font-size:28px;font-weight:bold;color:#38bdf8}
-nav{margin-top:18px}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font-family:Arial,sans-serif}
+header{background:#101c32;padding:20px;text-align:center;border-bottom:1px solid #263650}
+.logo{font-size:27px;font-weight:800;color:var(--accent)}
+nav{margin-top:16px}
 nav a{color:white;text-decoration:none;margin:0 10px;font-size:14px}
-.hero{text-align:center;padding:65px 20px;background:linear-gradient(135deg,#172554,#0f172a)}
-.hero h1{font-size:34px;margin:0 0 15px}
-.hero p{color:#cbd5e1;line-height:1.7}
-.btn{display:inline-block;background:#22c55e;color:white;padding:13px 22px;border-radius:9px;text-decoration:none;font-weight:bold;margin-top:15px}
-section{padding:45px 18px;max-width:1100px;margin:auto}
-section h2{text-align:center;font-size:27px;margin-bottom:30px}
-.products{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px}
-.card{background:#1e293b;padding:25px 18px;border:1px solid #334155;border-radius:15px;text-align:center}
-.card h3{font-size:23px}
-.card p{color:#cbd5e1;line-height:1.6}
-.price{color:#38bdf8;font-weight:bold}
-footer{text-align:center;background:#111827;padding:30px 15px;color:#94a3b8}
+.hero{text-align:center;padding:65px 20px;background:linear-gradient(135deg,#172554,#080f20)}
+.hero h1{font-size:clamp(29px,6vw,46px);margin:0 0 16px}
+.hero p{color:var(--muted);line-height:1.7}
+.btn{display:inline-block;background:#22c55e;color:#fff;padding:13px 18px;border-radius:10px;text-decoration:none;font-weight:bold;margin-top:15px;font-size:14px}
+.hero .btn{background:#0284c7}
+section{max-width:1150px;margin:auto;padding:45px 18px}
+h2{text-align:center;font-size:28px}
+.subtitle{text-align:center;color:var(--muted)}
+#search{display:block;width:100%;max-width:500px;margin:28px auto;padding:15px;border:1px solid #42526b;border-radius:12px;background:#111c32;color:white;font-size:16px}
+.products{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+.card{background:var(--card);padding:25px 20px;border:1px solid #30415d;border-radius:17px;text-align:center;display:flex;flex-direction:column;align-items:center}
+.card .symbol{font-size:39px}
+.card h3{font-size:22px;margin:15px 0 10px}
+.card p{color:var(--muted);line-height:1.6}
+.card .details{min-height:45px}
+.price{font-size:27px;color:var(--accent);font-weight:800;margin:10px 0}
+.card .btn{margin-top:auto;width:100%}
+.note{font-size:12px;color:#9caec7}
+.info{text-align:center;background:#111c32;border-radius:16px;padding:30px}
+footer{text-align:center;background:#101827;color:#9caec7;padding:28px 15px;line-height:1.8}
+@media(max-width:550px){.products{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.card{padding:18px 10px}.card h3{font-size:17px}.price{font-size:22px}.card .btn{font-size:12px;padding:12px 6px}}
 </style>
 </head>
 <body>
@@ -37,55 +50,71 @@ footer{text-align:center;background:#111827;padding:30px 15px;color:#94a3b8}
 
 <div class="hero" id="home">
 <h1>Premium Digital Tools</h1>
-<p>Explore digital subscriptions and creative tools at Pro Tools Hub.</p>
-<a class="btn" href="#products">Explore Products</a>
+<p>Explore our digital tools and subscription packages.</p>
+<a href="#products" class="btn">Explore All Products ↓</a>
 </div>
 
 <section id="products">
 <h2>Our Digital Tools</h2>
-<div class="products">
-
-<div class="card">
-<h3>🎨 Canva</h3>
-<p>Design and creative productivity tools.</p>
-<p class="price">Ask for Pricing</p>
-<a class="btn" href="https://wa.me/923218329853?text=Hi%2C%20I%20want%20Canva%20subscription%20details">Order on WhatsApp</a>
-</div>
-
-<div class="card">
-<h3>🤖 ChatGPT</h3>
-<p>AI assistance for writing, learning and productivity.</p>
-<p class="price">Ask for Pricing</p>
-<a class="btn" href="https://wa.me/923218329853?text=Hi%2C%20I%20want%20ChatGPT%20subscription%20details">Order on WhatsApp</a>
-</div>
-
-<div class="card">
-<h3>🎬 CapCut</h3>
-<p>Creative video editing tools.</p>
-<p class="price">Ask for Pricing</p>
-<a class="btn" href="https://wa.me/923218329853?text=Hi%2C%20I%20want%20CapCut%20subscription%20details">Order on WhatsApp</a>
-</div>
-
-<div class="card">
-<h3>💻 Other Digital Tools</h3>
-<p>Contact us to ask about available products.</p>
-<p class="price">Contact for Details</p>
-<a class="btn" href="https://wa.me/923218329853?text=Hi%2C%20I%20want%20information%20about%20digital%20tools">Contact Us</a>
-</div>
-
-</div>
+<p class="subtitle">Browse packages and enquire on WhatsApp</p>
+<input id="search" type="search" placeholder="🔎 Search your favorite tool..." aria-label="Search products">
+<div class="products" id="productGrid"></div>
+<p id="empty" style="display:none;text-align:center">No matching tools found.</p>
 </section>
 
-<section id="contact" style="text-align:center">
-<h2>Contact Pro Tools Hub</h2>
-<p>Questions about products or subscriptions?</p>
-<a class="btn" href="https://wa.me/923218329853">Chat on WhatsApp</a>
+<section id="contact">
+<div class="info">
+<h2>Need Assistance?</h2>
+<p>Contact Pro Tools Hub for product availability, eligibility and package details.</p>
+<a class="btn" href="https://wa.me/923218329853" target="_blank" rel="noopener">💬 Chat on WhatsApp</a>
+</div>
 </section>
 
 <footer>
+<strong>🚀 Pro Tools Hub</strong>
+<p>Digital Tools & Subscription Store</p>
+<p>WhatsApp: 0321 8329853</p>
 <p>© 2026 Pro Tools Hub. All rights reserved.</p>
-<p>Independent digital tools store.</p>
+<p class="note">Independent store. Product names belong to their respective owners. Packages subject to provider terms and availability.</p>
 </footer>
+
+<script>
+const phone="923218329853";
+const products=[
+{name:"ChatGPT Plus",icon:"🤖",duration:"1 Month",type:"Shared Account",price:500},
+{name:"CapCut Pro",icon:"🎬",duration:"Confirm Duration",type:"Private Account",price:1000},
+{name:"Canva Pro",icon:"🎨",duration:"1 Year",type:"Customer Email",price:1000},
+{name:"QuillBot",icon:"✍️",duration:"1 Month",type:"Subscription",price:350},
+{name:"Grammarly",icon:"📝",duration:"1 Month",type:"Subscription",price:300},
+{name:"StealthWriter",icon:"🔏",duration:"1 Month",type:"Customer Email",price:1500},
+{name:"Gemini Pro",icon:"✨",duration:"18 Months",type:"Customer Email",price:1500},
+{name:"Spotify",icon:"🎵",duration:"3 Months",type:"Private Account",price:1500},
+{name:"Muse AI",icon:"🎥",duration:"1 Month",type:"Subscription",price:1000}
+];
+const grid=document.getElementById("productGrid");
+const search=document.getElementById("search");
+const empty=document.getElementById("empty");
+function render(){
+const q=search.value.trim().toLowerCase();
+const filtered=products.filter(p=>p.name.toLowerCase().includes(q));
+grid.innerHTML="";
+empty.style.display=filtered.length?"none":"block";
+filtered.forEach(p=>{
+const card=document.createElement("article");
+card.className="card";
+const message=`Hello Pro Tools Hub! I want to enquire about ${p.name}, ${p.duration}, ${p.type}, listed at Rs. ${p.price}. Please confirm availability and terms.`;
+const url=`https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+card.innerHTML=`
+<div class="symbol">${p.icon}</div>
+<h3>${p.name}</h3>
+<p class="details">${p.duration}<br>${p.type}</p>
+<div class="price">Rs. ${p.price.toLocaleString("en-PK")}</div>
+<a class="btn" href="${url}" target="_blank" rel="noopener">💬 Enquire on WhatsApp</a>`;
+grid.appendChild(card);
+});
+}
+search.addEventListener("input",render);
+render();
+</script>
 </body>
-  </html>
-  
+</html>
