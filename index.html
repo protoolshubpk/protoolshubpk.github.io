@@ -243,9 +243,16 @@ img.alt="ChatGPT logo";
 img.onerror=()=>{symbol.textContent="🤖"};
 symbol.append(img);
 }else{
-symbol.textContent=p.icon;
-}
 
+if(p.name==="CapCut Pro"){
+  const img=document.createElement("img");
+  img.src="https://cdn.simpleicons.org/capcut/000000";
+  img.alt="CapCut Logo";
+  symbol.append(img);
+}else{
+  symbol.textContent=p.icon;
+  }
+  }
 const title=document.createElement("h3");
 title.textContent=p.name;
 const detail=document.createElement("p");
