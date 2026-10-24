@@ -1,11 +1,10 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="google-site-verification" content="WUrE0eO5uS-3-6Z3ibnKSv0TxoYvwOLCkuVU6ho_2xc">
-<meta name="description" content="Pro Tools Hub Pakistan - digital subscriptions and premium tools.">
+<meta name="description" content="Pro Tools Hub Pakistan - affordable digital subscriptions and premium productivity and creativity tools. Browse prices and order via WhatsApp.">
 <title>Pro Tools Hub | Premium Digital Tools</title>
 <style>
 *{box-sizing:border-box}
@@ -67,7 +66,6 @@ footer{background:#092e5d;color:#c8dbf1;text-align:center;padding:28px 15px;font
 </style>
 </head>
 <body>
-
 <header>
 <nav>
 <a class="logo" href="#home">✦ Pro Tools Hub</a>
@@ -80,16 +78,13 @@ footer{background:#092e5d;color:#c8dbf1;text-align:center;padding:28px 15px;font
 </div>
 </nav>
 </header>
-
 <div class="hero" id="home">
 <h1 data-t="hero">Premium Tools. Smarter Work.</h1>
 <p data-t="tagline">Affordable digital subscriptions for creativity, productivity and entertainment.</p>
 <a href="#products" class="btn white" data-t="explore">Explore Products</a>
 <a href="https://wa.me/923218329853" class="btn green" target="_blank" rel="noopener" data-t="support">WhatsApp Support</a>
 </div>
-
-<div class="trust" data-t="trust">✓ 10 Digital Products · ✓ Clear PKR Prices · ✓ WhatsApp Ordering</div>
-
+<div class="trust" data-t="trust">✓ 11 Digital Products · ✓ Clear PKR Prices · ✓ WhatsApp Ordering</div>
 <main>
 <section class="wrap" id="products">
 <h2 data-t="products">Explore Our Products</h2>
@@ -98,7 +93,6 @@ footer{background:#092e5d;color:#c8dbf1;text-align:center;padding:28px 15px;font
 <div class="grid" id="grid"></div>
 <p id="noresults" hidden>No products found.</p>
 </section>
-
 <section class="bluebg">
 <div class="wrap two">
 <div class="panel" id="cart">
@@ -108,7 +102,6 @@ footer{background:#092e5d;color:#c8dbf1;text-align:center;padding:28px 15px;font
 <button id="checkout" class="btn green" data-t="checkout">Order on WhatsApp</button>
 <p class="note" data-t="cartNote">Availability and payment details are confirmed manually on WhatsApp.</p>
 </div>
-
 <div class="panel">
 <h2>💳 <span data-t="funds">Add Funds Request</span></h2>
 <p class="note" data-t="fundIntro">Request manual payment instructions through WhatsApp.</p>
@@ -121,7 +114,6 @@ footer{background:#092e5d;color:#c8dbf1;text-align:center;padding:28px 15px;font
 </div>
 </div>
 </section>
-
 <section class="wrap">
 <h2 data-t="faqTitle">Frequently Asked Questions</h2>
 <div class="faq">
@@ -130,7 +122,6 @@ footer{background:#092e5d;color:#c8dbf1;text-align:center;padding:28px 15px;font
 <article><h3 data-t="q3">What about refunds?</h3><p data-t="a3">Ask about refund, replacement and activation terms before paying.</p></article>
 </div>
 </section>
-
 <section class="wrap">
 <div class="support">
 <h2 data-t="help">Need Help?</h2>
@@ -139,39 +130,33 @@ footer{background:#092e5d;color:#c8dbf1;text-align:center;padding:28px 15px;font
 </div>
 </section>
 </main>
-
 <footer>
 <p>© <span id="year"></span> Pro Tools Hub</p>
 <p data-t="disclaimer">Independent reseller. Not affiliated with the listed brands. Confirm terms before payment.</p>
 </footer>
-
 <a class="float" href="https://wa.me/923218329853" target="_blank" rel="noopener">✆ WhatsApp</a>
-
 <script>
 "use strict";
-
 const PHONE="923218329853";
 const products=[
-{name:"ChatGPT Plus",icon:"chatgpt",en:"Shared account · 1 month",ur:"شیئرڈ اکاؤنٹ · 1 ماہ",price:500},
-{name:"CapCut Pro",icon:"🎬",en:"Private account · Confirm duration",ur:"پرائیویٹ اکاؤنٹ · مدت کی تصدیق کریں",price:1000},
+{name:"ChatGPT Plus",icon:"chatgpt",en:"1 month · Customer email · 25-day warranty",ur:"1 ماہ · کسٹمر ای میل · 25 دن وارنٹی",price:600},
+{name:"CapCut Pro",icon:"🎬",en:"Private account · Confirm duration",ur:"پرائیویٹ اکاؤنٹ · مدت کی تصدیق کریں",price:799},
 {name:"Canva Pro",icon:"🎨",en:"1 year · Customer email",ur:"1 سال · کسٹمر ای میل",price:1000},
 {name:"QuillBot",icon:"📝",en:"1 month",ur:"1 ماہ",price:350},
 {name:"Grammarly",icon:"✍️",en:"1 month",ur:"1 ماہ",price:300},
 {name:"StealthWriter",icon:"🖋️",en:"1 month · Customer email",ur:"1 ماہ · کسٹمر ای میل",price:1500},
 {name:"Gemini Pro",icon:"✨",en:"18 months · Customer email",ur:"18 ماہ · کسٹمر ای میل",price:1500},
 {name:"Spotify",icon:"🎵",en:"3 months · Private account",ur:"3 ماہ · پرائیویٹ اکاؤنٹ",price:1500},
-{name:"Muse AI",icon:"🤖",en:"1 month",ur:"1 ماہ",price:1000},
-  
-{name:"Netflix",icon:"🎬",en:"1 Screen · 1 Month",ur:"1 اسکرین · 1 ماہ",price:500}
-  
+{name:"Muse AI",icon:"🤖",en:"1 month · Customer email · 25-day warranty",ur:"1 ماہ · کسٹمر ای میل · 25 دن وارنٹی",price:599},
+{name:"Netflix",icon:"🎬",en:"1 Screen · 1 Month",ur:"1 اسکرین · 1 ماہ",price:500},
+{name:"Claude Pro",icon:"🧠",en:"Private account · 1 device",ur:"پرائیویٹ اکاؤنٹ · 1 ڈیوائس",price:2500}
 ];
-
 const translations={
 en:{
 cart:"Cart",hero:"Premium Tools. Smarter Work.",
 tagline:"Affordable digital subscriptions for creativity, productivity and entertainment.",
 explore:"Explore Products",support:"WhatsApp Support",
-trust:"✓ 10 Digital Products · ✓ Clear PKR Prices · ✓ WhatsApp Ordering",
+trust:"✓ 11 Digital Products · ✓ Clear PKR Prices · ✓ WhatsApp Ordering",
 products:"Explore Our Products",productSub:"Find the right digital tool for your needs.",
 cartTitle:"Your Cart",total:"Total",checkout:"Order on WhatsApp",
 cartNote:"Availability and payment details are confirmed manually on WhatsApp.",
@@ -192,7 +177,7 @@ ur:{
 cart:"کارٹ",hero:"بہترین ڈیجیٹل ٹولز، آسان کام",
 tagline:"تخلیقی کام، پیداوار اور تفریح کے لیے مناسب قیمت پر سبسکرپشنز۔",
 explore:"پروڈکٹس دیکھیں",support:"واٹس ایپ سپورٹ",
-trust:"✓ 10 ڈیجیٹل پروڈکٹس · ✓ واضح قیمتیں · ✓ واٹس ایپ آرڈر",
+trust:"✓ 11 ڈیجیٹل پروڈکٹس · ✓ واضح قیمتیں · ✓ واٹس ایپ آرڈر",
 products:"ہمارے پروڈکٹس",productSub:"اپنی ضرورت کے مطابق ٹول منتخب کریں۔",
 cartTitle:"آپ کا کارٹ",total:"کل رقم",checkout:"واٹس ایپ پر آرڈر کریں",
 cartNote:"دستیابی اور ادائیگی کی تفصیل واٹس ایپ پر تصدیق کی جائے گی۔",
@@ -211,31 +196,25 @@ remove:"ہٹائیں",search:"پروڈکٹ تلاش کریں...",noresults:"کو
 invalid:"صفر سے زیادہ درست رقم درج کریں۔"
 }
 };
-
 let lang="en";
 let cart=[];
 const $=id=>document.getElementById(id);
 const money=n=>n.toLocaleString("en-PK");
-
 function whatsapp(message){
 window.open("https://wa.me/"+PHONE+"?text="+encodeURIComponent(message),"_blank","noopener");
 }
-
 function renderProducts(){
 const query=$("search").value.toLowerCase().trim();
 const grid=$("grid");
 grid.replaceChildren();
 let found=0;
-
 products.forEach((p,index)=>{
 if(!p.name.toLowerCase().includes(query))return;
 found++;
-
 const card=document.createElement("article");
 card.className="card";
 const symbol=document.createElement("div");
 symbol.className="symbol";
-
 if(p.icon==="chatgpt"){
 const img=document.createElement("img");
 img.src="https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg";
@@ -243,16 +222,14 @@ img.alt="ChatGPT logo";
 img.onerror=()=>{symbol.textContent="🤖"};
 symbol.append(img);
 }else{
-
 if(p.name==="CapCut Pro"){
-  const img=document.createElement("img");
-  img.src="https://cdn.simpleicons.org/capcut/000000";
-  img.alt="CapCut Logo";
-  symbol.append(img);
-}else{
-  symbol.textContent=p.icon;
-  }
-  }
+const img=document.createElement("img");
+img.src="https://cdn.simpleicons.org/capcut/000000";
+img.alt="CapCut Logo";
+img.onerror=()=>{symbol.textContent="🎬"};
+symbol.append(img);
+}else{symbol.textContent=p.icon;}
+}
 const title=document.createElement("h3");
 title.textContent=p.name;
 const detail=document.createElement("p");
@@ -264,35 +241,29 @@ price.textContent="Rs "+money(p.price);
 const button=document.createElement("button");
 button.className="btn";
 button.textContent=translations[lang].add;
-
 button.onclick=()=>{
 cart.push(index);
 renderCart();
 button.textContent=translations[lang].added;
 setTimeout(()=>{button.textContent=translations[lang].add},1000);
 };
-
 card.append(symbol,title,detail,price,button);
 grid.append(card);
 });
-
 $("noresults").hidden=found!==0;
 $("noresults").textContent=translations[lang].noresults;
 }
-
 function renderCart(){
 const area=$("cartitems");
 area.replaceChildren();
 $("count").textContent=cart.length;
 let total=0;
-
 if(cart.length===0){
 const empty=document.createElement("p");
 empty.className="note";
 empty.textContent=translations[lang].empty;
 area.append(empty);
 }
-
 cart.forEach((index,position)=>{
 const p=products[index];
 total+=p.price;
@@ -304,38 +275,27 @@ const remove=document.createElement("button");
 remove.className="remove";
 remove.textContent="✕";
 remove.setAttribute("aria-label",translations[lang].remove+" "+p.name);
-remove.onclick=()=>{
-cart.splice(position,1);
-renderCart();
-};
+remove.onclick=()=>{cart.splice(position,1);renderCart();};
 line.append(name,remove);
 area.append(line);
 });
-
 $("total").textContent=money(total);
 $("checkout").disabled=cart.length===0;
 }
-
 function translate(){
 lang=$("lang").value;
 document.documentElement.lang=lang;
 document.querySelectorAll("[data-t]").forEach(el=>{
 const key=el.dataset.t;
-if(translations[lang][key]!==undefined){
-el.textContent=translations[lang][key];
-}
+if(translations[lang][key]!==undefined){el.textContent=translations[lang][key];}
 });
 $("search").placeholder=translations[lang].search;
 renderProducts();
 renderCart();
 }
-
 $("lang").addEventListener("change",translate);
 $("search").addEventListener("input",renderProducts);
-$("cartNav").onclick=()=>{
-$("cart").scrollIntoView({behavior:"smooth"});
-};
-
+$("cartNav").onclick=()=>{$("cart").scrollIntoView({behavior:"smooth"});};
 $("checkout").onclick=()=>{
 if(cart.length===0)return;
 const lines=cart.map(index=>{
@@ -343,28 +303,17 @@ const p=products[index];
 return p.name+" — Rs "+money(p.price);
 });
 const total=cart.reduce((sum,index)=>sum+products[index].price,0);
-whatsapp(
-"Hello Pro Tools Hub, I want to order:\n"+
-lines.join("\n")+
-"\nTotal: Rs "+money(total)+
-"\nPlease confirm availability and payment details."
-);
+whatsapp("Hello Pro Tools Hub, I want to order:\n"+
+lines.join("\n")+"\nTotal: Rs "+money(total)+
+"\nPlease confirm availability and payment details.");
 };
-
 $("fundBtn").onclick=()=>{
 const amount=Number($("amount").value);
-if(!Number.isSafeInteger(amount)||amount<=0){
-alert(translations[lang].invalid);
-return;
-}
+if(!Number.isSafeInteger(amount)||amount<=0){alert(translations[lang].invalid);return;}
 const method=$("method").value;
-whatsapp(
-"Hello Pro Tools Hub, I want to request adding Rs "+
-money(amount)+" using "+method+
-". Please share verified payment instructions."
-);
+whatsapp("Hello Pro Tools Hub, I want to request adding Rs "+money(amount)+" using "+method+
+". Please share verified payment instructions.");
 };
-
 $("year").textContent=new Date().getFullYear();
 translate();
 </script>
