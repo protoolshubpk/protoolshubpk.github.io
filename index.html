@@ -1,321 +1,205 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="google-site-verification" content="WUrE0eO5uS-3-6Z3ibnKSv0TxoYvwOLCkuVU6ho_2xc">
-<meta name="description" content="Pro Tools Hub Pakistan - affordable digital subscriptions and premium productivity and creativity tools. Browse prices and order via WhatsApp.">
-<title>Pro Tools Hub | Premium Digital Tools</title>
-<style>
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;background:#f3f8ff;color:#173454;font-family:Arial,sans-serif}
-a{text-decoration:none}
-button,input,select{font:inherit}
-button{cursor:pointer}
-header{position:sticky;top:0;z-index:10;background:white;box-shadow:0 2px 12px #17345418}
-nav{max-width:1100px;margin:auto;padding:15px;display:flex;align-items:center;justify-content:space-between;gap:10px}
-.logo{font-size:22px;font-weight:800;color:#0764ca}
-.actions{display:flex;align-items:center;gap:8px}
-.btn{border:0;border-radius:10px;background:#0871e5;color:white;padding:12px 17px;font-weight:bold;display:inline-block}
-.btn:hover{background:#0757af}
-.btn.green{background:#19a763}
-.btn.white{background:white;color:#075fc4}
-.btn.light{background:#e8f2ff;color:#0757b2}
-.btn:disabled{opacity:.5}
-select,input{border:1px solid #d5e2f2;border-radius:10px;padding:11px;background:white;max-width:100%}
-.hero{background:linear-gradient(125deg,#063a82,#1684f0);color:white;text-align:center;padding:75px 20px}
-.hero h1{font-size:clamp(31px,6vw,54px);margin:0 0 15px}
-.hero p{color:#e0efff;line-height:1.7;font-size:17px}
-.hero .btn{margin:10px 5px 0}
-.wrap{max-width:1100px;margin:auto;padding:0 18px}
-.trust{text-align:center;background:white;color:#41678e;padding:19px;font-weight:bold;line-height:1.9}
-section{padding:45px 0}
-h2{color:#0b4c99;font-size:29px;margin:0 0 12px}
-.sub{color:#6c819b;margin:0 0 24px}
-#search{width:100%;padding:15px;margin-bottom:25px}
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:19px}
-.card{background:white;border:1px solid #dce8f7;border-radius:17px;padding:23px;display:flex;flex-direction:column;box-shadow:0 5px 18px #123b6510}
-.symbol{height:68px;width:68px;border-radius:15px;background:#eaf3ff;display:flex;align-items:center;justify-content:center;font-size:35px}
-.symbol img{height:54px;width:54px;object-fit:contain}
-.card h3{font-size:21px;margin:18px 0 9px}
-.detail{color:#71849a;font-size:14px;min-height:40px;line-height:1.6}
-.price{font-size:27px;font-weight:800;color:#0868cf;margin:14px 0}
-.card .btn{margin-top:auto}
-.bluebg{background:#e9f3ff}
-.two{display:grid;grid-template-columns:1fr 1fr;gap:20px}
-.panel{background:white;border:1px solid #dce8f7;border-radius:18px;padding:24px}
-.panel h2{font-size:23px}
-.panel label{display:block;font-weight:bold;margin:16px 0 7px}
-.panel input,.panel select,.panel .btn{width:100%}
-.panel .btn{margin-top:15px}
-.line{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:13px 0;border-bottom:1px solid #e8eef7}
-.remove{background:#ffe9ec;color:#b22b40;border:0;border-radius:8px;padding:7px 10px}
-.total{display:flex;justify-content:space-between;font-size:20px;font-weight:bold;margin:20px 0}
-.note{font-size:13px;color:#6c829a;line-height:1.7}
-.faq{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-.faq article{background:white;border:1px solid #dce8f7;border-radius:15px;padding:20px}
-.faq h3{color:#1055a4}
-.faq p{font-size:14px;color:#6c829a;line-height:1.7}
-.support{background:#0b4d9c;color:white;border-radius:19px;text-align:center;padding:32px}
-.support h2{color:white}
-footer{background:#092e5d;color:#c8dbf1;text-align:center;padding:28px 15px;font-size:13px;line-height:1.7}
-.float{position:fixed;right:15px;bottom:17px;background:#19a763;color:white;border-radius:40px;padding:15px 19px;font-weight:bold;box-shadow:0 5px 20px #0003}
-@media(max-width:800px){.grid{grid-template-columns:repeat(2,1fr)}.faq{grid-template-columns:1fr}}
-@media(max-width:600px){.grid,.two{grid-template-columns:1fr}.hero{padding:55px 18px}.logo{font-size:18px}.actions{gap:5px}.actions .btn{padding:10px}.panel{padding:19px}}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Shop digital subscriptions and productivity tools at Pro Tools Hub.">
+  <meta name="theme-color" content="#0b63ce">
+  <title>Pro Tools Hub | Premium Digital Tools</title>
+  <link rel="stylesheet" href="./styles.css">
+  <script type="module" src="./app.js"></script>
 </head>
 <body>
-<header>
-<nav>
-<a class="logo" href="#home">✦ Pro Tools Hub</a>
-<div class="actions">
-<select id="lang" aria-label="Language">
-<option value="en">English</option>
-<option value="ur">اردو</option>
-</select>
-<button class="btn light" id="cartNav">🛒 <span data-t="cart">Cart</span> (<span id="count">0</span>)</button>
-</div>
-</nav>
-</header>
-<div class="hero" id="home">
-<h1 data-t="hero">Premium Tools. Smarter Work.</h1>
-<p data-t="tagline">Affordable digital subscriptions for creativity, productivity and entertainment.</p>
-<a href="#products" class="btn white" data-t="explore">Explore Products</a>
-<a href="https://wa.me/923218329853" class="btn green" target="_blank" rel="noopener" data-t="support">WhatsApp Support</a>
-</div>
-<div class="trust" data-t="trust">✓ 11 Digital Products · ✓ Clear PKR Prices · ✓ WhatsApp Ordering</div>
-<main>
-<section class="wrap" id="products">
-<h2 data-t="products">Explore Our Products</h2>
-<p class="sub" data-t="productSub">Find the right digital tool for your needs.</p>
-<input id="search" type="search" placeholder="Search products...">
-<div class="grid" id="grid"></div>
-<p id="noresults" hidden>No products found.</p>
-</section>
-<section class="bluebg">
-<div class="wrap two">
-<div class="panel" id="cart">
-<h2>🛒 <span data-t="cartTitle">Your Cart</span></h2>
-<div id="cartitems"></div>
-<div class="total"><span data-t="total">Total</span><span>Rs <span id="total">0</span></span></div>
-<button id="checkout" class="btn green" data-t="checkout">Order on WhatsApp</button>
-<p class="note" data-t="cartNote">Availability and payment details are confirmed manually on WhatsApp.</p>
-</div>
-<div class="panel">
-<h2>💳 <span data-t="funds">Add Funds Request</span></h2>
-<p class="note" data-t="fundIntro">Request manual payment instructions through WhatsApp.</p>
-<label for="method" data-t="method">Payment Method</label>
-<select id="method"><option>Easypaisa</option><option>OPay</option></select>
-<label for="amount" data-t="amount">Amount (PKR)</label>
-<input id="amount" type="number" min="1" step="1" placeholder="1000">
-<button id="fundBtn" class="btn" data-t="fundBtn">Request on WhatsApp</button>
-<p class="note" data-t="fundNote">This is not an automatic wallet. Confirm payment details and send your receipt for manual verification.</p>
-</div>
-</div>
-</section>
-<section class="wrap">
-<h2 data-t="faqTitle">Frequently Asked Questions</h2>
-<div class="faq">
-<article><h3 data-t="q1">How do I order?</h3><p data-t="a1">Add products to your cart and send the order through WhatsApp.</p></article>
-<article><h3 data-t="q2">How can I pay?</h3><p data-t="a2">Easypaisa and OPay details are confirmed through WhatsApp.</p></article>
-<article><h3 data-t="q3">What about refunds?</h3><p data-t="a3">Ask about refund, replacement and activation terms before paying.</p></article>
-</div>
-</section>
-<section class="wrap">
-<div class="support">
-<h2 data-t="help">Need Help?</h2>
-<p data-t="helpSub">Contact us for product information and assistance.</p>
-<a href="https://wa.me/923218329853" target="_blank" rel="noopener" class="btn green" data-t="support">WhatsApp Support</a>
-</div>
-</section>
-</main>
-<footer>
-<p>© <span id="year"></span> Pro Tools Hub</p>
-<p data-t="disclaimer">Independent reseller. Not affiliated with the listed brands. Confirm terms before payment.</p>
-</footer>
-<a class="float" href="https://wa.me/923218329853" target="_blank" rel="noopener">✆ WhatsApp</a>
-<script>
-"use strict";
-const PHONE="923218329853";
-const products=[
-{name:"ChatGPT Plus",icon:"chatgpt",en:"1 month · Customer email · 25-day warranty",ur:"1 ماہ · کسٹمر ای میل · 25 دن وارنٹی",price:600},
-{name:"CapCut Pro",icon:"🎬",en:"Private account · Confirm duration",ur:"پرائیویٹ اکاؤنٹ · مدت کی تصدیق کریں",price:799},
-{name:"Canva Pro",icon:"🎨",en:"1 year · Customer email",ur:"1 سال · کسٹمر ای میل",price:1000},
-{name:"QuillBot",icon:"📝",en:"1 month",ur:"1 ماہ",price:350},
-{name:"Grammarly",icon:"✍️",en:"1 month",ur:"1 ماہ",price:300},
-{name:"StealthWriter",icon:"🖋️",en:"1 month · Customer email",ur:"1 ماہ · کسٹمر ای میل",price:1500},
-{name:"Gemini Pro",icon:"✨",en:"18 months · Customer email",ur:"18 ماہ · کسٹمر ای میل",price:1500},
-{name:"Spotify",icon:"🎵",en:"3 months · Private account",ur:"3 ماہ · پرائیویٹ اکاؤنٹ",price:1500},
-{name:"Muse AI",icon:"🤖",en:"1 month · Customer email · 25-day warranty",ur:"1 ماہ · کسٹمر ای میل · 25 دن وارنٹی",price:599},
-{name:"Netflix",icon:"🎬",en:"1 Screen · 1 Month",ur:"1 اسکرین · 1 ماہ",price:500},
-{name:"Claude Pro",icon:"🧠",en:"Private account · 1 device",ur:"پرائیویٹ اکاؤنٹ · 1 ڈیوائس",price:2500}
-];
-const translations={
-en:{
-cart:"Cart",hero:"Premium Tools. Smarter Work.",
-tagline:"Affordable digital subscriptions for creativity, productivity and entertainment.",
-explore:"Explore Products",support:"WhatsApp Support",
-trust:"✓ 11 Digital Products · ✓ Clear PKR Prices · ✓ WhatsApp Ordering",
-products:"Explore Our Products",productSub:"Find the right digital tool for your needs.",
-cartTitle:"Your Cart",total:"Total",checkout:"Order on WhatsApp",
-cartNote:"Availability and payment details are confirmed manually on WhatsApp.",
-funds:"Add Funds Request",fundIntro:"Request manual payment instructions through WhatsApp.",
-method:"Payment Method",amount:"Amount (PKR)",fundBtn:"Request on WhatsApp",
-fundNote:"This is not an automatic wallet. Confirm payment details and send your receipt for manual verification.",
-faqTitle:"Frequently Asked Questions",
-q1:"How do I order?",a1:"Add products to your cart and send the order through WhatsApp.",
-q2:"How can I pay?",a2:"Easypaisa and OPay details are confirmed through WhatsApp.",
-q3:"What about refunds?",a3:"Ask about refund, replacement and activation terms before paying.",
-help:"Need Help?",helpSub:"Contact us for product information and assistance.",
-disclaimer:"Independent reseller. Not affiliated with the listed brands. Confirm terms before payment.",
-add:"Add to Cart",added:"Added ✓",empty:"Your cart is empty.",
-remove:"Remove",search:"Search products...",noresults:"No products found.",
-invalid:"Please enter a valid amount greater than zero."
-},
-ur:{
-cart:"کارٹ",hero:"بہترین ڈیجیٹل ٹولز، آسان کام",
-tagline:"تخلیقی کام، پیداوار اور تفریح کے لیے مناسب قیمت پر سبسکرپشنز۔",
-explore:"پروڈکٹس دیکھیں",support:"واٹس ایپ سپورٹ",
-trust:"✓ 11 ڈیجیٹل پروڈکٹس · ✓ واضح قیمتیں · ✓ واٹس ایپ آرڈر",
-products:"ہمارے پروڈکٹس",productSub:"اپنی ضرورت کے مطابق ٹول منتخب کریں۔",
-cartTitle:"آپ کا کارٹ",total:"کل رقم",checkout:"واٹس ایپ پر آرڈر کریں",
-cartNote:"دستیابی اور ادائیگی کی تفصیل واٹس ایپ پر تصدیق کی جائے گی۔",
-funds:"فنڈز کی درخواست",fundIntro:"واٹس ایپ پر ادائیگی کی تفصیل حاصل کریں۔",
-method:"ادائیگی کا طریقہ",amount:"رقم (روپے)",
-fundBtn:"واٹس ایپ پر درخواست بھیجیں",
-fundNote:"خودکار والٹ موجود نہیں۔ ادائیگی سے پہلے تفصیل کی تصدیق کریں اور رسید بھیجیں۔",
-faqTitle:"اکثر پوچھے جانے والے سوالات",
-q1:"آرڈر کیسے کریں؟",a1:"پروڈکٹ کارٹ میں شامل کریں اور واٹس ایپ پر آرڈر بھیجیں۔",
-q2:"ادائیگی کیسے کریں؟",a2:"ایزی پیسہ اور او پے کی تفصیل واٹس ایپ پر تصدیق کریں۔",
-q3:"ریفنڈ کا کیا طریقہ ہے؟",a3:"ادائیگی سے پہلے ریفنڈ اور ایکٹیویشن کی شرائط معلوم کریں۔",
-help:"مدد چاہیے؟",helpSub:"پروڈکٹ کی معلومات کے لیے رابطہ کریں۔",
-disclaimer:"آزاد ری سیلر؛ درج شدہ برانڈز سے وابستہ نہیں۔ ادائیگی سے پہلے شرائط معلوم کریں۔",
-add:"کارٹ میں شامل کریں",added:"شامل ہو گیا ✓",empty:"آپ کا کارٹ خالی ہے۔",
-remove:"ہٹائیں",search:"پروڈکٹ تلاش کریں...",noresults:"کوئی پروڈکٹ نہیں ملی۔",
-invalid:"صفر سے زیادہ درست رقم درج کریں۔"
-}
-};
-let lang="en";
-let cart=[];
-const $=id=>document.getElementById(id);
-const money=n=>n.toLocaleString("en-PK");
-function whatsapp(message){
-window.open("https://wa.me/"+PHONE+"?text="+encodeURIComponent(message),"_blank","noopener");
-}
-function renderProducts(){
-const query=$("search").value.toLowerCase().trim();
-const grid=$("grid");
-grid.replaceChildren();
-let found=0;
-products.forEach((p,index)=>{
-if(!p.name.toLowerCase().includes(query))return;
-found++;
-const card=document.createElement("article");
-card.className="card";
-const symbol=document.createElement("div");
-symbol.className="symbol";
-if(p.icon==="chatgpt"){
-const img=document.createElement("img");
-img.src="https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg";
-img.alt="ChatGPT logo";
-img.onerror=()=>{symbol.textContent="🤖"};
-symbol.append(img);
-}else{
-if(p.name==="CapCut Pro"){
-const img=document.createElement("img");
-img.src="https://cdn.simpleicons.org/capcut/000000";
-img.alt="CapCut Logo";
-img.onerror=()=>{symbol.textContent="🎬"};
-symbol.append(img);
-}else{symbol.textContent=p.icon;}
-}
-const title=document.createElement("h3");
-title.textContent=p.name;
-const detail=document.createElement("p");
-detail.className="detail";
-detail.textContent=p[lang];
-const price=document.createElement("div");
-price.className="price";
-price.textContent="Rs "+money(p.price);
-const button=document.createElement("button");
-button.className="btn";
-button.textContent=translations[lang].add;
-button.onclick=()=>{
-cart.push(index);
-renderCart();
-button.textContent=translations[lang].added;
-setTimeout(()=>{button.textContent=translations[lang].add},1000);
-};
-card.append(symbol,title,detail,price,button);
-grid.append(card);
-});
-$("noresults").hidden=found!==0;
-$("noresults").textContent=translations[lang].noresults;
-}
-function renderCart(){
-const area=$("cartitems");
-area.replaceChildren();
-$("count").textContent=cart.length;
-let total=0;
-if(cart.length===0){
-const empty=document.createElement("p");
-empty.className="note";
-empty.textContent=translations[lang].empty;
-area.append(empty);
-}
-cart.forEach((index,position)=>{
-const p=products[index];
-total+=p.price;
-const line=document.createElement("div");
-line.className="line";
-const name=document.createElement("span");
-name.textContent=p.name+" — Rs "+money(p.price);
-const remove=document.createElement("button");
-remove.className="remove";
-remove.textContent="✕";
-remove.setAttribute("aria-label",translations[lang].remove+" "+p.name);
-remove.onclick=()=>{cart.splice(position,1);renderCart();};
-line.append(name,remove);
-area.append(line);
-});
-$("total").textContent=money(total);
-$("checkout").disabled=cart.length===0;
-}
-function translate(){
-lang=$("lang").value;
-document.documentElement.lang=lang;
-document.querySelectorAll("[data-t]").forEach(el=>{
-const key=el.dataset.t;
-if(translations[lang][key]!==undefined){el.textContent=translations[lang][key];}
-});
-$("search").placeholder=translations[lang].search;
-renderProducts();
-renderCart();
-}
-$("lang").addEventListener("change",translate);
-$("search").addEventListener("input",renderProducts);
-$("cartNav").onclick=()=>{$("cart").scrollIntoView({behavior:"smooth"});};
-$("checkout").onclick=()=>{
-if(cart.length===0)return;
-const lines=cart.map(index=>{
-const p=products[index];
-return p.name+" — Rs "+money(p.price);
-});
-const total=cart.reduce((sum,index)=>sum+products[index].price,0);
-whatsapp("Hello Pro Tools Hub, I want to order:\n"+
-lines.join("\n")+"\nTotal: Rs "+money(total)+
-"\nPlease confirm availability and payment details.");
-};
-$("fundBtn").onclick=()=>{
-const amount=Number($("amount").value);
-if(!Number.isSafeInteger(amount)||amount<=0){alert(translations[lang].invalid);return;}
-const method=$("method").value;
-whatsapp("Hello Pro Tools Hub, I want to request adding Rs "+money(amount)+" using "+method+
-". Please share verified payment instructions.");
-};
-$("year").textContent=new Date().getFullYear();
-translate();
-</script>
+  <div class="topline">
+    <div class="container topline-inner">
+      <span><span class="status-dot"></span> Digital products · Clear PKR prices · WhatsApp support</span>
+      <span class="topline-right">Need help? <a href="https://wa.me/923218329853" target="_blank" rel="noopener">Chat with us</a></span>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <nav class="container nav">
+      <a class="brand" href="#home">
+        <span class="brand-mark">✦</span>
+        <span class="brand-text">Pro Tools <b>Hub</b><small>SMARTER DIGITAL WORK</small></span>
+      </a>
+      <div class="nav-actions">
+        <label class="language-select">
+          <span class="sr-only">Choose language</span>
+          <select id="lang" aria-label="Language">
+            <option value="en">English</option>
+            <option value="ur">اردو</option>
+          </select>
+        </label>
+        <button class="btn btn-outline cart-nav" id="cartNav" type="button">
+          🛒 <span data-t="cart">Cart</span>
+          <span class="cart-count" id="count">0</span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-orb orb-one"></div>
+      <div class="hero-orb orb-two"></div>
+      <div class="container hero-layout">
+        <div class="hero-copy">
+          <div class="eyebrow"><span class="eyebrow-icon">✦</span> YOUR DIGITAL TOOLKIT</div>
+          <h1 data-t="hero">Premium tools.<br><span>Smarter work.</span></h1>
+          <p data-t="tagline">Explore digital subscriptions for creativity, productivity and entertainment — with clear prices and friendly support.</p>
+          <div class="hero-actions">
+            <a href="#products" class="btn btn-white" data-t="explore">Explore products →</a>
+            <a href="https://wa.me/923218329853" class="btn btn-whatsapp" target="_blank" rel="noopener" data-t="support">WhatsApp support</a>
+          </div>
+          <div class="hero-proof">
+            <span><b>✓</b> Clear PKR pricing</span>
+            <span><b>✓</b> Order assistance</span>
+            <span><b>✓</b> Mobile friendly</span>
+          </div>
+        </div>
+
+        <div class="hero-visual" aria-label="Digital tools illustration">
+          <div class="visual-glow"></div>
+          <div class="visual-window">
+            <div class="window-top"><span></span><span></span><span></span><i>protoolshub.pk</i></div>
+            <div class="window-content">
+              <div class="window-label">YOUR WORKSPACE</div>
+              <div class="window-title">Tools that move<br>you forward.</div>
+              <div class="tool-tiles">
+                <div class="tool-tile tile-blue"><span>✦</span><small>AI Tools</small></div>
+                <div class="tool-tile tile-violet"><span>▧</span><small>Design</small></div>
+                <div class="tool-tile tile-green"><span>▶</span><small>Video</small></div>
+                <div class="tool-tile tile-orange"><span>✎</span><small>Writing</small></div>
+              </div>
+              <div class="visual-footer"><span class="mini-check">✓</span> Find your next favourite tool <span class="visual-arrow">↗</span></div>
+            </div>
+          </div>
+          <div class="floating-pill pill-top">✦ Productivity</div>
+          <div class="floating-pill pill-bottom">✓ Simple ordering</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="trust-strip">
+      <div class="container trust-grid">
+        <div class="trust-item"><span class="trust-icon">₨</span><div><b>Clear prices</b><small>Shown in PKR</small></div></div>
+        <div class="trust-item"><span class="trust-icon">🛍</span><div><b>Easy ordering</b><small>Cart to WhatsApp</small></div></div>
+        <div class="trust-item"><span class="trust-icon">💬</span><div><b>Human support</b><small>Ask before paying</small></div></div>
+        <div class="trust-item"><span class="trust-icon">📱</span><div><b>Mobile ready</b><small>Shop on the go</small></div></div>
+      </div>
+    </section>
+
+    <section class="section container" id="products">
+      <div class="section-heading">
+        <div>
+          <div class="eyebrow eyebrow-blue">FIND YOUR TOOL</div>
+          <h2 data-t="products">Explore our products</h2>
+          <p class="section-sub" data-t="productSub">Choose a product to see its price and add it to your cart.</p>
+        </div>
+        <div class="product-count"><span id="productCount">11</span> <span data-t="available">products available</span></div>
+      </div>
+
+      <div class="catalog-controls">
+        <label class="search-box">
+          <span aria-hidden="true">⌕</span>
+          <span class="sr-only">Search products</span>
+          <input id="search" type="search" placeholder="Search products by name..." autocomplete="off">
+          <kbd>⌘ K</kbd>
+        </label>
+        <label class="sort-box">
+          <span data-t="sort">Sort:</span>
+          <select id="sort">
+            <option value="featured">Featured</option>
+            <option value="price-low">Price: low to high</option>
+            <option value="price-high">Price: high to low</option>
+            <option value="name">Name: A–Z</option>
+          </select>
+        </label>
+      </div>
+
+      <div class="category-row" id="categories" aria-label="Product categories"></div>
+      <div class="catalog-message" id="catalogMessage" hidden></div>
+      <div class="product-grid" id="grid" aria-live="polite"></div>
+
+      <div class="empty-state" id="noresults" hidden>
+        <div class="empty-icon">⌕</div>
+        <h3 data-t="noresultsTitle">No products found</h3>
+        <p data-t="noresults">Try another search or choose a different category.</p>
+        <button class="btn btn-outline" id="clearFilters" type="button" data-t="clearFilters">Clear filters</button>
+      </div>
+    </section>
+
+    <section class="checkout-section" id="checkoutArea">
+      <div class="container checkout-grid">
+        <div class="panel cart-panel" id="cart">
+          <div class="panel-heading">
+            <div class="panel-icon">🛒</div>
+            <div><h2 data-t="cartTitle">Your cart</h2><p data-t="cartSub">Review your selected products.</p></div>
+          </div>
+          <div id="cartitems" class="cart-items"></div>
+          <div class="cart-total"><span data-t="total">Total</span><strong>Rs <span id="total">0</span></strong></div>
+          <button id="checkout" class="btn btn-primary btn-full" type="button" data-t="checkout">Continue on WhatsApp →</button>
+          <p class="fine-print" data-t="cartNote">Availability, account type and payment details are confirmed manually on WhatsApp before payment.</p>
+        </div>
+
+        <div class="panel funds-panel">
+          <div class="panel-heading">
+            <div class="panel-icon funds-icon">₨</div>
+            <div><h2 data-t="funds">Payment instructions</h2><p data-t="fundIntro">Request payment details before you make a payment.</p></div>
+          </div>
+          <form id="fundForm">
+            <label for="method" data-t="method">Payment method</label>
+            <select id="method">
+              <option>Easypaisa</option>
+              <option>JazzCash</option>
+              <option>Bank transfer</option>
+              <option>Other (confirm on WhatsApp)</option>
+            </select>
+            <label for="amount" data-t="amount">Amount (PKR)</label>
+            <div class="amount-field"><span>Rs</span><input id="amount" type="number" min="1" step="1" placeholder="1000" inputmode="numeric" required></div>
+            <button id="fundBtn" class="btn btn-outline btn-full" type="submit" data-t="fundBtn">Request payment details</button>
+          </form>
+          <div class="secure-note"><span>ⓘ</span><p data-t="fundNote">This is a manual request, not an automatic wallet. Always verify payment details and product terms before paying.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container">
+      <div class="section-heading faq-heading">
+        <div><div class="eyebrow eyebrow-blue">GOOD TO KNOW</div><h2 data-t="faqTitle">Frequently asked questions</h2></div>
+      </div>
+      <div class="faq-grid">
+        <article class="faq-card"><div class="faq-number">01</div><h3 data-t="q1">How do I order?</h3><p data-t="a1">Add products to your cart and continue to WhatsApp. We will confirm availability and the final details.</p></article>
+        <article class="faq-card"><div class="faq-number">02</div><h3 data-t="q2">How can I pay?</h3><p data-t="a2">Request verified payment instructions through WhatsApp before sending money.</p></article>
+        <article class="faq-card"><div class="faq-number">03</div><h3 data-t="q3">What about refunds?</h3><p data-t="a3">Ask about activation, warranty, replacement and refund terms for your selected product before paying.</p></article>
+      </div>
+    </section>
+
+    <section class="container support-section">
+      <div class="support-card">
+        <div class="support-decoration">✦</div>
+        <div><div class="eyebrow support-eyebrow">WE'RE HERE TO HELP</div><h2 data-t="help">Need a hand choosing?</h2><p data-t="helpSub">Message us with your requirements and we'll help you check the available options.</p></div>
+        <a href="https://wa.me/923218329853" target="_blank" rel="noopener" class="btn btn-white" data-t="support">WhatsApp support ↗</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-main">
+      <a class="brand footer-brand" href="#home"><span class="brand-mark">✦</span><span class="brand-text">Pro Tools <b>Hub</b><small>SMARTER DIGITAL WORK</small></span></a>
+      <p>Digital tools for your workflow.</p>
+      <a href="https://wa.me/923218329853" target="_blank" rel="noopener">WhatsApp support ↗</a>
+    </div>
+    <div class="container footer-bottom">
+      <span>© <span id="year"></span> Pro Tools Hub. All rights reserved.</span>
+      <span class="footer-disclaimer" data-t="disclaimer">Independent reseller. Product names belong to their respective owners. Confirm terms before payment.</span>
+    </div>
+  </footer>
+
+  <a class="floating-whatsapp" href="https://wa.me/923218329853" target="_blank" rel="noopener" aria-label="WhatsApp support"><span>◉</span><b>WhatsApp</b></a>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
 </body>
-</html>
+  </html>
+    
