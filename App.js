@@ -104,7 +104,7 @@ async function loadStoreProducts() {
       return;
     }
 
-    if (error && $("catalogMessage")) {
+   if ($("catalogMessage")) {
       $("catalogMessage").hidden = false;
       $("catalogMessage").textContent =
         "Live catalogue unavailable. Showing backup products.";
