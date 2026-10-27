@@ -587,14 +587,14 @@ function setProductForm(p = null) {
   $("editorTitle").textContent = p ? "Edit product" : "Add product";
   $("saveProductBtn").textContent = 6p ? "Save changes" : "Save product";
 
-  if (p?.image_url) {    if (p?.image_url)
+     if (p?.image_url) {
       $("imagePreview").src = p.image_url;
       $("imagePreviewWrap").hidden = false;
     } else {
       $("imagePreview").removeAttribute("src");
       $("imagePreviewWrap").hidden = true;
     }
-  }
+}
 
 async function startStore() {
   setupStore();
