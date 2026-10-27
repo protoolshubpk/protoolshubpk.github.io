@@ -585,11 +585,39 @@ function setProductForm(p = null) {
   $("productFeatured").checked = Boolean(p?.featured);
 
   $("editorTitle").textContent = p ? "Edit product" : "Add product";
-  $("saveProductBtn").textContent = p ? "Save changes" : "Save product";
+  $("saveProductBtn").textContent = 6p ? "Save changes" : "Save product";
 
-  if (p?.image_url) {
-    $("imagePreview").src = p.image_url;
-    $("imagePreviewWrap").hidden = false;
-  } else {
-    $("imagePreview").removeAttribute("src");
-    $("imagePr
+  if (p?.image_url) {    if (p?.image_url)
+      $("imagePreview").src = p.image_url;
+      $("imagePreviewWrap").hidden = false;
+    } else {
+      $("imagePreview").removeAttribute("src");
+      $("imagePreviewWrap").hidden = true;
+    }
+  }
+
+async function startStore() {
+  setupStore();
+
+  try {
+    await initSupabase();
+  } catch (error) {
+    console.error("Supabase initialization failed:", error);
+  }
+
+  try {
+    await loadStoreProducts();
+  } catch (error) {
+    console.error("Product loading failed:", error);
+    products = fallbackProducts;
+  }
+
+  renderCategories();
+  renderProducts();
+  renderCart();
+}
+
+if (!ADMIN_MODE) {
+  startStore();
+}
+    
