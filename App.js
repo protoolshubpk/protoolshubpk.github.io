@@ -232,7 +232,9 @@ function renderProducts() {
 
     const duration = document.createElement("span");
     duration.className = "product-duration";
-    duration.textContent = p.duration || "";
+    duration.textContent = p.name.trim().toLowerCase() === "capcut pro"
+      ? "1 month · 25-day warranty"
+      : (p.duration || "");
 
     const bottom = document.createElement("div");
     bottom.className = "product-bottom";
