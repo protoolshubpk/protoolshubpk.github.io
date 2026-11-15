@@ -194,9 +194,13 @@ function renderProducts() {
     const media = document.createElement("div");
     media.className = "product-media";
 
-    if (p.image_url) {
+    const imageUrl = p.name.trim().toLowerCase() === "capcut pro"
+      ? "./IMG_5e7bd6a4-19cd-4bb3-9915-5a719f36bb55_1.jpg"
+      : p.image_url;
+
+    if (imageUrl) {
       const image = document.createElement("img");
-      image.src = p.image_url;
+      image.src = imageUrl;
       image.alt = p.name;
       image.loading = "lazy";
 
