@@ -198,7 +198,9 @@ function renderProducts() {
       ? "./IMG_5e7bd6a4-19cd-4bb3-9915-5a719f36bb55_1.jpg"
       : p.name.trim().toLowerCase() === "chatgpt plus"
   ? "./IMG_0d7eb61b-9542-4a6b-a651-134e724688a8.png"
-  : p.image_url;
+  : p.name.trim().toLowerCase() === "canva pro"
+        ? "./IMG_ea01cdb5-ab2c-446b-a5df-146cd16b08ac.jpg"
+        : p.image_url;
 
     if (imageUrl) {
       const image = document.createElement("img");
@@ -230,7 +232,9 @@ function renderProducts() {
 
     const description = document.createElement("p");
     description.className = "product-description";
-    description.textContent = p.description || "";
+    description.textContent = p.name.trim().toLowerCase() === "canva pro"
+      ? "1-year plan activated on your email."
+      : (p.description || "");
 
     const duration = document.createElement("span");
     duration.className = "product-duration";
