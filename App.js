@@ -196,7 +196,9 @@ function renderProducts() {
 
     const imageUrl = p.name.trim().toLowerCase() === "capcut pro"
       ? "./IMG_5e7bd6a4-19cd-4bb3-9915-5a719f36bb55_1.jpg"
-      : p.image_url;
+      : p.name.trim().toLowerCase() === "chatgpt plus"
+  ? "./IMG_0d7eb61b-9542-4a6b-a651-134e724688a8.png"
+  : p.image_url;
 
     if (imageUrl) {
       const image = document.createElement("img");
